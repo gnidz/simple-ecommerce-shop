@@ -19,7 +19,7 @@ PHPMyAdmin สำหรับจัดการฐานข้อมูล
 
 ตั้งค่าการเชื่อมต่อฐานข้อมูล:
 
-เปิดไฟล์ /source/project_orchid/db.php และ /source/project_orchid/db_pdo.php
+เปิดไฟล์ db.php และ db_pdo.php
 แก้ไขค่าการเชื่อมต่อฐานข้อมูลให้ตรงกับเครื่องของคุณ:
 $host = "localhost"; // เปลี่ยน server host ตาม MySQL ที่ใช้
 $user = "root"; // เปลี่ยน user ตาม MySQL ที่ใช้
@@ -33,7 +33,7 @@ $database = "ecommerce"; // ชื่อฐานข้อมูล
 สร้างฐานข้อมูล:
 คลิก "New" และสร้างฐานข้อมูลชื่อ ecommerce
 นำเข้าฐานข้อมูล:
-ไปที่แท็บ "Import" และเลือกไฟล์ /sql/ecommerce.sql
+ไปที่แท็บ "Import" และเลือกไฟล์ sql/ecommerce.sql
 คลิก "Go" เพื่อสร้างตารางและข้อมูลเริ่มต้น
 
 ตั้งค่าบัญชีผู้ดูแลระบบ (Admin):
