@@ -1,53 +1,107 @@
-# simple-ecommerce-shop
+# Simple E-Commerce Shop
 
-โปรแกรมที่จำเป็น
-XAMPP (หรือโปรแกรมเว็บเซิร์ฟเวอร์ที่รองรับ PHP และ MySQL)
-PHP 7.4 ขึ้นไป
-เว็บเบราว์เซอร์ (Chrome, Firefox, หรือ Edge)
-PHPMyAdmin สำหรับจัดการฐานข้อมูล
+Simple E-Commerce Shop is a beginner-friendly project designed to implement a basic e-commerce platform with essential features. This project showcases core functionalities of an online shop, including product management, user account handling, shopping cart functionality, and order processing. Built using **PHP**, **MySQL**, and **Bootstrap**, it offers a dynamic and responsive experience.
 
-การติดตั้งโปรเจกต์
+---
 
-ดาวน์โหลดและติดตั้ง XAMPP:
+## Features
 
-ดาวน์โหลดโปรแกรม XAMPP จากเว็บไซต์ https://www.apachefriends.org
-ติดตั้งโปรแกรมและเริ่ม Apache และ MySQL ผ่าน XAMPP Control Panel
-คัดลอกไฟล์โปรเจ็กต์:
+### **User Features**
+- **Product Browsing**: Explore available products with detailed descriptions and images.
+- **Shopping Cart**: Add, update, and remove items from the cart.
+- **User Account Management**:
+  - User registration and login system.
+  - Role-based access control (Admin/User).
+- **Order Management**:
+  - Place orders and view summaries.
+  - Track order status updates.
 
-คัดลอกโฟลเดอร์ project_orchid ไปไว้ที่ htdocs ของ XAMPP
-ตัวอย่าง: C:\xampp\htdocs\project_orchid
+### **Admin Features**
+- **Dashboard**: Access key statistics like:
+  - Total revenue
+  - Total products
+  - Total users
+  - Pending orders
+- **Product Management**:
+  - Add, edit, and delete products.
+  - Upload product images.
+- **User Management**:
+  - View, edit, and delete user accounts.
+- **Order Management**:
+  - Update order status (e.g., pending, shipped, completed).
 
-ตั้งค่าการเชื่อมต่อฐานข้อมูล:
+---
 
-เปิดไฟล์ db.php และ db_pdo.php
-แก้ไขค่าการเชื่อมต่อฐานข้อมูลให้ตรงกับเครื่องของคุณ:
-$host = "localhost"; // เปลี่ยน server host ตาม MySQL ที่ใช้
-$user = "root"; // เปลี่ยน user ตาม MySQL ที่ใช้
-$password = ""; // เปลี่ยน password ตาม MySQL ที่ใช้
-$database = "ecommerce"; // ชื่อฐานข้อมูล
+## Installation
 
-การติดตั้งฐานข้อมูล
+### **Prerequisites**
+1. **Web Server**: Install a local server like [XAMPP](https://www.apachefriends.org/) or [WAMP](https://www.wampserver.com/).
+2. **Database**: MySQL or equivalent database.
+3. **PHP**: PHP 7.4+ is recommended.
+   
+### **Move Files**
+- Navigate to the `/source/` folder within the project.
+- Move all files to your local server’s root directory (e.g., `htdocs` for XAMPP).
 
-เข้าสู่ PHPMyAdmin:
-เปิดเบราว์เซอร์และเข้า URL: http://localhost/phpmyadmin
-สร้างฐานข้อมูล:
-คลิก "New" และสร้างฐานข้อมูลชื่อ ecommerce
-นำเข้าฐานข้อมูล:
-ไปที่แท็บ "Import" และเลือกไฟล์ sql/ecommerce.sql
-คลิก "Go" เพื่อสร้างตารางและข้อมูลเริ่มต้น
+### **Set Up Database**
+1. Open your browser and go to `http://localhost/phpmyadmin`.
+2. Create a new database named `ecommerce`.
+3. Import the SQL file located in `/sql/ecommerce.sql` to set up the database schema and sample data.
 
-ตั้งค่าบัญชีผู้ดูแลระบบ (Admin):
-แก้ไขโดยตรงที่ฐานข้อมูลในตาราง users และตั้งค่าคอลัมน์ role เป็น admin
+### **Configure Database Connection**
+1. Open the `db.php` and `db_pdo.php` files.
+2. Update the database connection settings as per your local environment:
+   ```php
+   $host = 'localhost';
+   $user = 'root';
+   $password = '';
+   $dbname = 'ecommerce';
 
-รันโปรเจกต์:
+Navigate to http://localhost/simple-ecommerce-shop/ in your web browser.
 
-เปิดเว็บเบราว์เซอร์
-เข้าสู่ URL: http://localhost/project_orchid/login.php
+---
 
-รหัสผ่านเข้าเว็ปไซต์ role admin
-username: admin
-password: admin123
+### **User Roles and Credentials**
 
-รหัสผ่านเข้าเว็ปไซต์ role user
-username: user
-password: user123
+The application includes predefined accounts to help you test role-based access control:
+
+1. **User Role**:
+   - **Username**: `user`
+   - **Password**: `user123`
+
+2. **Admin Role**:
+   - **Username**: `admin`
+   - **Password**: `admin123`
+
+Use these credentials to log in and explore the respective functionalities for users and administrators.
+
+---
+
+## Usage
+
+### **Homepage**
+- Explore featured products, best sellers, and promotional banners.
+- Navigate to the shop or individual product pages.
+
+### **Admin Dashboard**
+- View a summary of statistics including:
+  - **Total Products**: Number of products available in the shop.
+  - **Total Users**: Total registered users.
+  - **Total Orders**: Orders placed by all users.
+  - **Total Revenue**: Sum of all orders' values.
+  - **Average Order Value**: Revenue per order.
+  - **New Users**: Users registered in the past 30 days.
+  - **Pending Orders**: Orders yet to be processed.
+  - **Out-of-Stock Products**: Items with no stock remaining.
+- Manage products, users, and orders through intuitive forms and tables.
+
+### **Shop & Cart**
+- Browse products, view details, and add items to the cart.
+- Adjust quantities or remove items from the cart before placing an order.
+
+---
+
+### **Contribution**
+Contributions are welcome! Feel free to fork this repository and submit pull requests with new features or improvements.
+
+---
